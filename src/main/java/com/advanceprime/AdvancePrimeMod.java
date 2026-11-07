@@ -37,6 +37,8 @@ public class AdvancePrimeMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        RoleNetworking.init();
+
         // /village command: shows nearest village
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
                 dispatcher.register(CommandManager.literal("village").executes(ctx -> {
